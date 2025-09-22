@@ -1,23 +1,36 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+}
+
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
+  padding: 24px;
   list-style: none;
-  padding: 0;
 }
 
 .gallery-item {
-  flex-basis: calc(33.333% - 16px);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-link {
+  display: block;
+  text-decoration: none;
 }
 
 .gallery-image {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
 .gallery-image:hover {
   transform: scale(1.05);
 }
+
